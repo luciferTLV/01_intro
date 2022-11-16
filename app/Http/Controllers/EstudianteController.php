@@ -14,7 +14,9 @@ class EstudianteController extends Controller
      */
     public function index()
     {
-        //
+        $obeto_estudiante = new Estudiante();
+        $estudiantes = $obeto_estudiante->mostrar_estudiantes();
+        return view('estudiantes.index', compact("estudiantes"));
     }
 
     /**
